@@ -1,0 +1,12 @@
+# Netlify config for the HyperFit pnpm/Turborepo monorepo (Next.js app at apps/web)
+[build]
+  command = "pnpm install --no-frozen-lockfile && pnpm --filter @hyperfit/db generate && pnpm --filter @hyperfit/web build"
+  publish = "apps/web/.next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Prisma needs this when generating in some CI environments
+  PRISMA_CLIENT_ENGINE_TYPE = "library"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

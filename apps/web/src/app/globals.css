@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium glossy white / black / red theme */
+  --hyper-black: #0a0a0a;       /* ink (text) */
+  --hyper-white: #ffffff;       /* page background */
+  --hyper-accent: #c8102e;      /* premium glossy red */
+  --hyper-accent-alt: #ff3c3c;  /* bright red — alerts */
+  --hyper-gray-dark: #f2f2f2;   /* light surfaces */
+  --hyper-gray-mid: #d8d8d8;    /* borders */
+  --hyper-muted: #6b6b6b;       /* muted text */
+}
+
+@theme {
+  --color-accent: #c8102e;
+  --color-accent-alt: #ff3c3c;
+  --color-surface: #f2f2f2;
+  --color-border: #d8d8d8;
+  --color-muted: #6b6b6b;
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --animate-shimmer: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(200, 16, 46, 0.4); }
+  50% { box-shadow: 0 0 20px 8px rgba(200, 16, 46, 0); }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* `clip` prevents horizontal overflow WITHOUT turning the page into a nested
+     scroll container (which `overflow-x: hidden` on both html+body does, and
+     that was causing the whole layout to shift left). */
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--hyper-white);
+  color: var(--hyper-black);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hyper-accent);
+}
+
+/* Selection */
+::selection {
+  background: var(--hyper-accent);
+  color: #ffffff;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--hyper-accent);
+  outline-offset: 2px;
+}
+
+/* Links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Headings utility */
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--hyper-accent), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Lime glow */
+.glow-lime {
+  box-shadow: 0 0 30px rgba(200, 16, 46, 0.25);
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(28, 28, 28, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(68, 68, 68, 0.5);
+}
+
+/* Magnetic button base */
+.magnetic {
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Noise texture overlay */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
