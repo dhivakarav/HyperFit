@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
 const FALLBACK_SHOE_CONFIG = {
   zones: {
     sole: { color: '#0a0a0a', material: 'Synthetic' },
@@ -26,6 +24,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ config: FALLBACK_SHOE_CONFIG })
     }
 
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const prompt = `Generate a ${style} design config for a ${productType} customizer. Return ONLY JSON with this structure for shoes: {"zones":{"sole":{"color":"#hex","material":"Leather|Mesh|Suede|Knit|Synthetic"},"lace":{"color":"#hex","material":"..."},"upper":{"color":"#hex","material":"..."},"midsole":{"color":"#hex","material":"..."},"outsole":{"color":"#hex","material":"..."},"heel":{"color":"#hex","material":"..."},"toeCap":{"color":"#hex","material":"..."},"stitching":{"color":"#hex","material":"..."},"logo":{"color":"#hex","material":"..."},"sideDesign":{"color":"#hex","material":"..."}}}`
 
     const response = await client.chat.completions.create({

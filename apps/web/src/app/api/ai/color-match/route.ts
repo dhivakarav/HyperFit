@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-
 const FALLBACK_PALETTES: Record<string, string[]> = {
   dark: ['#1a1a2e', '#16213e', '#0f3460', '#533483', '#e94560'],
   lime: ['#e8ff47', '#b3cc00', '#78aa00', '#3d8700', '#006600'],
@@ -17,6 +15,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ colors: FALLBACK_PALETTES.default })
     }
 
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const response = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
