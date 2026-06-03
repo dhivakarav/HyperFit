@@ -184,7 +184,7 @@ export default function ShoeCustomizer() {
       {/* Left Panel — Controls */}
       <div className="w-full lg:w-[40%] lg:overflow-y-auto bg-[#ffffff] border-r border-[#f2f2f2] flex flex-col">
         <div className="p-8 border-b border-[#f2f2f2]">
-          <h1 className="font-display text-6xl text-[#0a0a0a]">SHOE BUILDER</h1>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[#0a0a0a]">SHOE BUILDER</h1>
           <p className="text-[#6b6b6b] text-lg mt-2">Customize every detail. Build your perfect pair.</p>
         </div>
 

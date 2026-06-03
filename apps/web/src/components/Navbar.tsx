@@ -78,8 +78,8 @@ export default function Navbar() {
         <div className="w-full px-4 md:px-8 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0 ml-4 md:ml-8 lg:ml-12">
-              <svg width="172" height="40" viewBox="0 0 172 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <Link href="/" className="flex items-center shrink-0 ml-1 sm:ml-4 md:ml-8 lg:ml-12">
+              <svg className="h-7 sm:h-9 lg:h-10 w-auto" viewBox="0 0 172 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <text x="0" y="33" fontFamily="'Bebas Neue', sans-serif" fontSize="40" fill="#0a0a0a" letterSpacing="3">HYPER</text>
                 <text x="100" y="33" fontFamily="'Bebas Neue', sans-serif" fontSize="40" fill="#c8102e" letterSpacing="3">FIT</text>
               </svg>

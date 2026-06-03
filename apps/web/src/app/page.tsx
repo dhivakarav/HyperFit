@@ -39,31 +39,31 @@ export default async function HomePage() {
       <StatsShowcase />
 
       {/* White spacer row before Men's Best Sellers */}
-      <div className="h-28 bg-[#ffffff]" />
+      <div className="h-10 sm:h-20 lg:h-28 bg-[#ffffff]" />
 
       <Suspense fallback={<div className="py-16 h-64" />}>
         <BestSellers title="Men's Best Sellers" eyebrow="For Him" href="/shop/men" products={men} />
       </Suspense>
 
       {/* White spacer row before Women's Best Sellers */}
-      <div className="h-28 bg-[#ffffff]" />
+      <div className="h-10 sm:h-20 lg:h-28 bg-[#ffffff]" />
 
       <Suspense fallback={<div className="py-16 h-64" />}>
         <BestSellers title="Women's Best Sellers" eyebrow="For Her" href="/shop/women" products={women} />
       </Suspense>
 
       {/* White spacer row before the studio */}
-      <div className="h-28 bg-[#ffffff]" />
+      <div className="h-10 sm:h-20 lg:h-28 bg-[#ffffff]" />
 
       <CustomStudioCTA />
 
       {/* White spacer row before reviews */}
-      <div className="h-28 bg-[#ffffff]" />
+      <div className="h-10 sm:h-20 lg:h-28 bg-[#ffffff]" />
 
       <Testimonials />
 
       {/* White spacer row before the footer */}
-      <div className="h-28 bg-[#ffffff]" />
+      <div className="h-10 sm:h-20 lg:h-28 bg-[#ffffff]" />
     </>
   )
 }

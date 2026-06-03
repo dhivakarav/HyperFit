@@ -76,7 +76,7 @@ export default function PantsCustomizer() {
       {/* Controls */}
       <div className="w-full lg:w-[40%] lg:overflow-y-auto bg-[#ffffff] border-r border-[#f2f2f2] flex flex-col">
         <div className="p-8 border-b border-[#f2f2f2]">
-          <h1 className="font-display text-6xl text-[#0a0a0a]">PANTS DESIGNER</h1>
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-[#0a0a0a]">PANTS DESIGNER</h1>
           <p className="text-[#6b6b6b] text-lg mt-2">Every detail, your way.</p>
         </div>
 
