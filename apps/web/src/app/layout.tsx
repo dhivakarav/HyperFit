@@ -37,6 +37,11 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 }
 
+// This app is request-driven (auth session, cart, live DB), so render dynamically
+// instead of statically prerendering — avoids DYNAMIC_SERVER_USAGE + useSearchParams
+// prerender errors during the production build.
+export const dynamic = 'force-dynamic'
+
 export const viewport: Viewport = {
   themeColor: '#0a0a0a',
   width: 'device-width',
