@@ -44,7 +44,13 @@ export const viewport: Viewport = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const session = await getServerSession(authOptions)
+  // Never let a session-fetch failure crash every page; fall back to no session.
+  let session = null
+  try {
+    session = await getServerSession(authOptions)
+  } catch (e) {
+    console.error('getServerSession failed in RootLayout:', e)
+  }
 
   return (
     <html lang="en" suppressHydrationWarning className={`${bebasNeue.variable} ${dmSans.variable}`}>
