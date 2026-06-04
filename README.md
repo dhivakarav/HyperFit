@@ -2,6 +2,8 @@
 
 AI-powered fashion e-commerce platform. Bold, futuristic, performance-meets-luxury.
 
+**Live demo:** https://hyper-fit1.netlify.app
+
 ## Tech Stack
 
 | Layer | Technology |
