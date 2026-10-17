@@ -1,3 +1,18 @@
+<!-- DHIVA-HEADER -->
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24,30&height=170&section=header&text=HyperFit&fontSize=46&fontColor=ffffff&animation=fadeIn" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=900&color=6C63FF&center=true&vCenter=true&width=600&lines=AI-powered%20fashion%20e-commerce%20with%203D%20customizers;by%20Dhivakar%20A%20V%20%E2%9C%A8" alt="HyperFit" />
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![GitHub](https://img.shields.io/badge/by-dhivakarav-181717?style=flat-square&logo=github)
+
+</div>
+
+🧥 _AI-powered fashion e-commerce with 3D customizers_
+
+---
+
 # HyperFit — Performance Meets Luxury
 
 AI-powered fashion e-commerce platform. Bold, futuristic, performance-meets-luxury.
